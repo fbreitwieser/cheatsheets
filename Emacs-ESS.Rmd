@@ -1,0 +1,24 @@
+Installation
+```
+# MacOS
+brew install emacs --with-cocoa
+brew install brewsci/science/ess
+```
+
+Configuration
+```
+## ~/.emacs
+;; Loading ESS
+(require 'ess-site)
+
+```
+
+Basic commands. Syntax: `~ab~` means `C-a C-b`
+```
+~xf~    Open file
+~x~o    Switch to other window
+~x~0    Close current window
+
+~cn~    Evaluate line
+~cp~    Evaluate paragraph
+```
