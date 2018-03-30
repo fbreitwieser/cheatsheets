@@ -24,6 +24,8 @@ Basic commands. Syntax: `~ab~` means `C-a C-b`
 ~x~o    Switch to other window
 ~x~0    Close current window
 
+M-/     Text completion
+
 ~b/e~   Beginning/End of line
 ~s/r~   Forward/backward search
 ~w~     Cut text
