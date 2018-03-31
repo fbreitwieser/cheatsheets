@@ -22,6 +22,7 @@ Basic commands. Syntax: `~ab~` means `C-a C-b`
 ~xf~    Open file
 ~xs~    Save file
 ~x~o    Switch to other window
+~x~b    Switch buffer
 ~x~0    Close current window
 
 M-/     Text completion
