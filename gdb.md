@@ -2,7 +2,10 @@ Compile with `-g`.
 
 
 ```
-(gdb) run ARGS
+gdb -ex run --args PROG -arg1 -arg2
+gdb program core
+gdb -x gdb-script
+
 (gdb) bt
 (gdb) frame X
 (gdb) set logging on
