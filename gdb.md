@@ -8,6 +8,7 @@ gdb -x gdb-script
 
 (gdb) bt
 (gdb) frame X
+(gdb) print var
 (gdb) set logging on
 (gdb) set logging file gdb.log
 (gdb) show logging
