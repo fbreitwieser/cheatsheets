@@ -76,6 +76,34 @@ shopt -s histverify # or M-^ for history-expand current line
 
 See bash man page.
 
+```
+       ${parameter#word}
+       ${parameter##word}
+              Remove matching prefix pattern.  The word is expanded to produce a pattern just as in pathname expansion.  If the pattern matches the beginning
+              of the value of parameter, then the result of the expansion is the expanded value of parameter with the shortest matching  pattern  (the  ``#''
+              case)  or  the  longest  matching  pattern (the ``##'' case) deleted.  If parameter is @ or *, the pattern removal operation is applied to each
+              positional parameter in turn, and the expansion is the resultant list.  If parameter is an array variable subscripted with @ or *, the  pattern
+              removal operation is applied to each member of the array in turn, and the expansion is the resultant list.
+
+       ${parameter%word}
+       ${parameter%%word}
+              Remove  matching  suffix  pattern.  The word is expanded to produce a pattern just as in pathname expansion.  If the pattern matches a trailing
+              portion of the expanded value of parameter, then the result of the expansion is the expanded value of parameter with the shortest matching pat-
+              tern  (the  ``%''  case)  or  the longest matching pattern (the ``%%'' case) deleted.  If parameter is @ or *, the pattern removal operation is
+              applied to each positional parameter in turn, and the expansion is the resultant list.  If parameter is an array variable subscripted with @ or
+              *, the pattern removal operation is applied to each member of the array in turn, and the expansion is the resultant list.
+
+       ${parameter/pattern/string}
+              Pattern substitution.  The pattern is expanded to produce a pattern just as in pathname expansion.  Parameter is expanded and the longest match
+              of pattern against its value is replaced with string.  If pattern begins with /, all matches of pattern are  replaced  with  string.   Normally
+              only  the  first  match  is replaced.  If pattern begins with #, it must match at the beginning of the expanded value of parameter.  If pattern
+              begins with %, it must match at the end of the expanded value of parameter.  If string is null, matches of pattern are deleted and the  /  fol-
+              lowing  pattern  may  be  omitted.  If the nocasematch shell option is enabled, the match is performed without regard to the case of alphabetic
+              characters.  If parameter is @ or *, the substitution operation is applied to each positional parameter in  turn,  and  the  expansion  is  the
+              resultant  list.   If parameter is an array variable subscripted with @ or *, the substitution operation is applied to each member of the array
+              in turn, and the expansion is the resultant list.
+```
+
 ## Keybindings
 ```
 ## Check keybindings
