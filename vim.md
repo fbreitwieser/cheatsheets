@@ -1,7 +1,6 @@
 # General configuration
 ```
 set nocompatible
-
 ```
 
 # Tab widths
@@ -30,4 +29,11 @@ For the modline: `vim :set ts=4 sw=4 sts=4 et :`
 :copen   ; open a mini window with a list of error
          ; hit Enter to jump to error
 C-]      ; follow tag under cursor
+```
+
+# Search / Replace
+```
+# No magic, i.e. regular expressions
+:set nomagic
+:%sno/SEARCH/REPLACE
 ```
