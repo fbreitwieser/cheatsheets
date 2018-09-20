@@ -1,7 +1,5 @@
 
-Report taxonomy information in tabular fo
-
-rmat (requires taxdb):
+Report taxonomy information in tabular format (requires taxdb):
 ```
 blastn -db refseq_genomic -num_threads 24 -query in.fa -outfmt '6 std sacc staxids sscinames scomnames stitle' -out res.m8
 ```
@@ -52,3 +50,8 @@ Outfmt 6 options:
 
 When not provided, the default value is:
 'qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore', which is equivalent to the keyword 'std'
+
+## Building custom database
+```
+makeblastdb -in mydb.fsa -parse_seqids -dbtype {nucl,prot}
+```
