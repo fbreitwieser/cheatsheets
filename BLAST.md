@@ -6,32 +6,37 @@ blastn -db refseq_genomic -num_threads 24 -query in.fa -outfmt '6 std sacc staxi
 
 BLAST help: https://www.ncbi.nlm.nih.gov/books/NBK279684/
 
-Outfmt 6 options:
+Outfmt 6 `std` options:
 
-|Name| |
+|Position|Name| Description|
+|--|--|--|
+|1| qseqid | Query Seq-id |
+|2| sseqid | Subject Seq-id |
+|3| pident | Percentage of identical matches |
+|4| length | Alignment length |
+|5| mismatch | Number of mismatches |
+|6| gapopen | Number of gap openings |
+|7| qstart | Start of alignment in query |
+|8| qend | End of alignment in query |
+|9| sstart | Start of alignment in subject |
+|10| send | End of alignment in subject |
+|11| evalue | Expect value |
+|12| bitscore | Bit score |
+
+Additional columns:
+
+| Specifier | Description |
 |--|--|
-| qseqid | Query Seq-id |
 | qacc | Query accesion |
-| sseqid | Subject Seq-id |
-| sallseqid | All subject Seq-id(s), separated by a ';' |
 | sacc | Subject accession |
 | sallacc | All subject accessions |
-| qstart | Start of alignment in query |
-| qend | End of alignment in query |
-| sstart | Start of alignment in subject |
-| send | End of alignment in subject |
+| sallseqid | All subject Seq-id(s), separated by a ';' |
 | qseq | Aligned part of query sequence |
 | sseq | Aligned part of subject sequence |
-| evalue | Expect value |
-| bitscore | Bit score |
-| score | Raw score |
-| length | Alignment length |
-| pident | Percentage of identical matches |
 | nident | Number of identical matches |
-| mismatch | Number of mismatches |
 | positive | Number of positive-scoring matches |
-| gapopen | Number of gap openings |
 | gaps | Total number of gap |
+| score | Raw score |
 | ppos | Percentage of positive-scoring matches |
 | frames | Query and subject frames separated by a '/' |
 | qframe | Query frame |
