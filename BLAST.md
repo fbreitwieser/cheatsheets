@@ -60,3 +60,14 @@ When not provided, the default value is:
 ```
 makeblastdb -in mydb.fsa -parse_seqids -dbtype {nucl,prot}
 ```
+
+## Extracting FASTA from database
+
+Extract all human sequences from the nr database
+```
+$ blastdbcmd -db nr -entry all -outfmt "%g %T" | \
+   awk ' { if ($2 == 9606) { print $1 } } ' | \
+   blastdbcmd -db nr -entry_batch - -out human_sequences.txt
+```
+
+https://www.ncbi.nlm.nih.gov/books/NBK279689/
