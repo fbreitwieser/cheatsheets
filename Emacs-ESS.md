@@ -1,11 +1,11 @@
-Installation
+## Installation
 ```
 # MacOS
 brew install emacs --with-cocoa
 brew install brewsci/science/ess
 ```
 
-Configuration
+## Configuration
 ```
 ## ~/.emacs
 ;; Loading ESS
