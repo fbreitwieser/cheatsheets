@@ -37,3 +37,13 @@ C-]      ; follow tag under cursor
 :set nomagic
 :%sno/SEARCH/REPLACE
 ```
+
+To easily save the current file, while keeping it open, use a mapping in your vimrc:
+
+```
+noremap <Leader>s :update<CR>
+```
+
+With the default leader key, just press \s to save any changes to the current file. If the buffer has not been modified since the last save, the file is not written.
+
+
