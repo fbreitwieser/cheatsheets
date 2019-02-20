@@ -1,4 +1,6 @@
 
+[My Manjaro i3 setup - Tech Knowledge Base - jaytaala.com Confluence](https://confluence.jaytaala.com/display/TKB/My+Manjaro+i3+setup)
+
 ## Firewall
 ```
 sudo pacman -S ufw
