@@ -1,4 +1,26 @@
 
+## Firewall
+```
+sudo pacman -S ufw
+sudo systemctl enable ufw
+sudo ufw enable
+sudo ufw status
+sudo gufw
+
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+
+# Allow some apps -- see them w/ sudo ufw app list
+sudo ufw allow 22/tcp # same: sudo ufw allow ssh
+sudo ufw allow transmission
+
+## for web server access
+# sudo ufw allow www
+```
+
+- [How To Setup a Firewall with UFW on an Ubuntu and Debian Cloud Server | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server)
+- [UFW - Community Help Wiki](https://help.ubuntu.com/community/UFW)
+
 ## Trackpad gestures
 
 ```
