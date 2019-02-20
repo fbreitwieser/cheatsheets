@@ -2,6 +2,9 @@
 ## Trackpad gestures
 
 ```
+pacman -S libinput x86-input-libinput xorg-xinput xdotool
+
+
 # Check devices
 xinput
 
